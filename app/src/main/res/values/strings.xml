@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">InDrive Helper</string>
+    <string name="accessibility_description">Lee automáticamente las ofertas de inDrive para ayudarte a decidir si aceptar o rechazar</string>
+</resources>
