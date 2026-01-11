@@ -1,16 +1,13 @@
 plugins {
     id 'com.android.application'
-    // Añadida versión de Kotlin moderna
     id 'org.jetbrains.kotlin.android' version '1.9.0' 
 }
 
 android {
-    // Se usa el SDK más reciente para la compilación
     compileSdk 34 
     
     defaultConfig {
         applicationId "com.indrive.decision"
-        // Clave para tu móvil: minSdk 21 permite Android 11 y anteriores
         minSdk 21
         targetSdk 34
         versionCode 1
@@ -22,10 +19,19 @@ android {
             minifyEnabled false
         }
     }
+    
+    // 💥 CORRECCIÓN AGREGADA
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
 }
 
 dependencies {
-    // Versiones de dependencias actualizadas
     implementation 'androidx.core:core-ktx:1.10.1' 
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
