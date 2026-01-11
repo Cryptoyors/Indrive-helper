@@ -1,4 +1,4 @@
-Name: Build APK
+name: Build APK  # <--- Debe ser 'name' en minúsculas.
 
 on:
   push:
@@ -26,9 +26,10 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew assembleDebug --stacktrace
     
-    # 💥 CAMBIO CRÍTICO AQUÍ: Se actualizó de v3 a v4
+    # Versión actualizada para corregir el error anterior
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
         name: app-debug
         path: app/build/outputs/apk/debug/app-debug.apk
+        
